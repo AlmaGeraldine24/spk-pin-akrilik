@@ -1,0 +1,4 @@
+alternatif,waktu_penyelesaian,throughput,waktu_tunggu,biaya_tambahan
+A1 (Kondisi Awal),608.5,19.72,298.5,100000
+A2 (+1 Mesin),409.5,29.30,199,725000
+A3 (+1 Mesin & +1 Pekerja),310,38.71,149.25,2225000
