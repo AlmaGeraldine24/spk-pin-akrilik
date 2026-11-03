@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Keputusan Pin Akrilik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Dashboard Keputusan Produksi Pin Akrilik</h1>
+  <p>Unggah data, lihat grafiknya bergerak, dan baca status Aman, Sedang, atau Tidak aman berdasarkan angka Modul I–IV Praktikum Terintegrasi II.</p>
+</header>
+
+<main>
+  <section class="summary" aria-label="Ringkasan keputusan">
+    <div id="overall" class="overall"><span class="dot"></span><div><b>Belum ada data</b><p>Unggah minimal satu file untuk melihat keputusan</p></div></div>
+    <div id="sum-prod" class="sc"><small>Produksi &amp; mutu</small><b></b><p></p></div>
+    <div id="sum-stok" class="sc"><small>Persediaan bahan</small><b></b><p></p></div>
+    <div id="sum-saw" class="sc"><small>Alternatif perbaikan</small><b></b><p></p></div>
+  </section>
+
+  <nav id="tabs" role="tablist"></nav>
+  <div id="panels"></div>
+
+  <details class="params">
+    <summary>Parameter dari modul (bisa diubah)</summary>
+    <div id="pgrid"></div>
+    <p class="note">Nilai awal diambil dari modul. Mengubah parameter langsung menghitung ulang semua hasil.</p>
+  </details>
+</main>
+
+<footer>
+  <p><b>Dasar keputusan.</b> Produksi: target normal 200 pcs, BEP dengan angsuran, batas cacat 5% (Modul I–II, SOP-05 dan SOP-08). Persediaan: safety stock 51 pin dan ROP 101 pin (Modul III, SOP-06B). Alternatif: metode SAW dengan bobot 30/30/20/20 (Modul IV).</p>
+  <p>Batas “Sedang” untuk cacat (mulai 4%) dan skor SAW (aman ≥ 0,75; sedang ≥ 0,60) adalah asumsi kami karena modul tidak menyebutkannya. Ubah di panel parameter bila perlu. Data pada tombol “Pakai data contoh” untuk produksi hanya ilustrasi.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
